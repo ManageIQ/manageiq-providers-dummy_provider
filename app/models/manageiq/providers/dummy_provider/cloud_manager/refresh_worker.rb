@@ -1,4 +1,4 @@
-class ManageIQ::Providers::DummyPro::CloudManager::RefreshWorker < MiqEmsRefreshWorker
+class ManageIQ::Providers::DummyProvider::CloudManager::RefreshWorker < MiqEmsRefreshWorker
   require_nested :Runner
 
   def self.ems_class

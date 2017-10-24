@@ -1,4 +1,4 @@
-class ManageIQ::Providers::DummyPro::Inventory::Parser::CloudManager < ManagerRefresh::Inventory::Parser
+class ManageIQ::Providers::DummyProvider::Inventory::Parser::CloudManager < ManagerRefresh::Inventory::Parser
   def parse
     vms
   end
