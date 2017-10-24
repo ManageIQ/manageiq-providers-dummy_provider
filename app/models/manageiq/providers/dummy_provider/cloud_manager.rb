@@ -25,7 +25,7 @@ class ManageIQ::Providers::DummyPro::CloudManager < ManageIQ::Providers::CloudMa
   end
 
   def self.ems_type
-    @ems_type ||= "dummy_pro".freeze
+    @ems_type ||= "dummy_provider".freeze
   end
 
   def self.description
