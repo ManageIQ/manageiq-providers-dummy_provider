@@ -1,0 +1,12 @@
+---
+:ems:
+  :ems_dummy_provider:
+    :blacklisted_event_names: []
+    :event_handling:
+      :event_groups:
+:http_proxy:
+  :dummy_provider:
+    :host:
+    :password:
+    :port:
+    :user:
