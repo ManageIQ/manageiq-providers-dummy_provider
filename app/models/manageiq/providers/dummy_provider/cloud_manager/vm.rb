@@ -1,2 +1,2 @@
-class ManageIQ::Providers::DummyPro::CloudManager::Vm < ManageIQ::Providers::CloudManager::Vm
+class ManageIQ::Providers::DummyProvider::CloudManager::Vm < ManageIQ::Providers::CloudManager::Vm
 end

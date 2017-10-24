@@ -1,4 +1,4 @@
-class ManageIQ::Providers::DummyPro::CloudManager < ManageIQ::Providers::CloudManager
+class ManageIQ::Providers::DummyProvider::CloudManager < ManageIQ::Providers::CloudManager
   require_nested :Refresher
   require_nested :RefreshWorker
   require_nested :Vm
