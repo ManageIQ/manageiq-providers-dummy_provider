@@ -21,7 +21,13 @@ class ManageIQ::Providers::DummyProvider::CloudManager < ManageIQ::Providers::Cl
   end
 
   def self.validate_authentication_args(params)
+    # return args to be used in raw_connect
     return [params[:default_userid], MiqPassword.encrypt(params[:default_password])]
+  end
+
+  def self.hostname_required?
+    # TODO: ExtManagementSystem is validating this
+    false
   end
 
   def self.raw_connect(*args)
