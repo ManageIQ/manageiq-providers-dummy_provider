@@ -20,7 +20,17 @@ class ManageIQ::Providers::DummyProvider::CloudManager < ManageIQ::Providers::Cl
     self.class.raw_connect(project, auth_token, options, options[:proxy_uri] || http_proxy_uri)
   end
 
-  def self.raw_connect(google_project, google_json_key, options, proxy_uri = nil)
+  def self.validate_authentication_args(params)
+    # return args to be used in raw_connect
+    return [params[:default_userid], MiqPassword.encrypt(params[:default_password])]
+  end
+
+  def self.hostname_required?
+    # TODO: ExtManagementSystem is validating this
+    false
+  end
+
+  def self.raw_connect(*args)
     true
   end
 
