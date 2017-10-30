@@ -1,4 +1,6 @@
 class ManageIQ::Providers::DummyProvider::CloudManager < ManageIQ::Providers::CloudManager
+  require_nested :MetricsCapture
+  require_nested :MetricsCollectorWorker
   require_nested :Refresher
   require_nested :RefreshWorker
   require_nested :Vm

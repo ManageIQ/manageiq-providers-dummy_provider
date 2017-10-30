@@ -29,3 +29,13 @@ The gem is available as open source under the terms of the [Apache License 2.0](
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+ems = ManageIQ::Providers::DummyProvider::CloudManager.create!(:name => "dummy", :hostname => "localhost", :zone_id => Zone.default_zone.id)
+ems.update_authentication(:default => {:userid => "user", :password => "pw"})
+ems.authentication_check
+
+ems = ManageIQ::Providers::DummyProvider::CloudManager.first
+EmsRefresh.refresh(ems)
+
+Vm.first.perf_capture "realtime"
+Vm.first.metrics
