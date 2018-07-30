@@ -1,0 +1,13 @@
+---
+- name: Dummy Operation
+  hosts: localhost
+  vars:
+    id: "{{ id }}"
+    name: "{{ name }}"
+  connection: local
+  gather_facts: False
+  tasks:
+    - name: Print the Username
+      command: "/bin/echo \"Provider username: {{ lookup('env', 'PROVIDER_USERID') }}\""
+    - name: Print the ID/Name
+      command: "/bin/echo \"ID [{{ id }}] Name [{{ name }}]\""
