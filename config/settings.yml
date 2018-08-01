@@ -8,6 +8,13 @@
           :critical:
             - DUMMY_PROVIDER_instance_power_on
             - DUMMY_PROVIDER_instance_power_off
+:ems_refresh:
+  :dummy_provider:
+    # Switches refresh to graph refresh on [Graph refresh only]
+    :inventory_object_refresh: true
+    :inventory_collections:
+      # Strategy for saving, another allowed is batch, doing batch SQL queries [Graph refresh only]
+      :saver_strategy: default
 :http_proxy:
   :dummy_provider:
     :host:
