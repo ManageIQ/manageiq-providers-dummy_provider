@@ -1,15 +1,33 @@
-class ManageIQ::Providers::DummyProvider::Inventory::Parser::CloudManager < ManagerRefresh::Inventory::Parser
+class ManageIQ::Providers::DummyProvider::Inventory::Parser::CloudManager < ManageIQ::Providers::DummyProvider::Inventory::Parser
   def parse
+    flavors
     vms
   end
 
-  def vms
-    collector.vms.each do |inventory|
-      inventory_object = persister.vms.find_or_build(inventory.id.to_s)
-      inventory_object.name = inventory.name
-      inventory_object.location = inventory.location
-      inventory_object.vendor = inventory.vendor
+  def flavors
+    collector.flavors.each do |flavor|
+      persister.flavors.build(
+        :name      => flavor["name"],
+        :ems_ref   => flavor["name"],
+        :cpus      => flavor["cpus"],
+        :cpu_cores => 1,
+        :memory    => flavor["memory"],
+      )
     end
   end
 
+  def vms
+    collector.vms.each do |vm|
+      flavor = persister.flavors.lazy_find(vm["instance_type"])
+
+      persister.vms.build(
+        :name     => vm["name"],
+        :ems_ref  => vm["uuid"],
+        :uid_ems  => vm["uuid"],
+        :vendor   => "unknown",
+        :location => "nowhere",
+        :flavor   => flavor,
+      )
+    end
+  end
 end
