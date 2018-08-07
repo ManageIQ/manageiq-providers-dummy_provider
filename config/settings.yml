@@ -12,9 +12,10 @@
   :dummy_provider:
     # Switches refresh to graph refresh on [Graph refresh only]
     :inventory_object_refresh: true
+    :allow_targeted_refresh: true
     :inventory_collections:
       # Strategy for saving, another allowed is batch, doing batch SQL queries [Graph refresh only]
-      :saver_strategy: default
+      :saver_strategy: batch
 :http_proxy:
   :dummy_provider:
     :host:
