@@ -1,7 +1,12 @@
 class ManageIQ::Providers::DummyProvider::Builder
   class << self
     def build_inventory(ems, target)
-      cloud_manager_inventory(ems, target)
+      case target
+      when ManagerRefresh::TargetCollection
+        targeted_inventory(ems, target)
+      else
+        cloud_manager_inventory(ems, target)
+      end
     end
 
     private
@@ -9,6 +14,14 @@ class ManageIQ::Providers::DummyProvider::Builder
     def cloud_manager_inventory(ems, target)
       collector_klass = ManageIQ::Providers::DummyProvider::Inventory::Collector::CloudManager
       persister_klass = ManageIQ::Providers::DummyProvider::Inventory::Persister::CloudManager
+      parser_klass    = ManageIQ::Providers::DummyProvider::Inventory::Parser::CloudManager
+
+      inventory(ems, target, collector_klass, persister_klass, [parser_klass])
+    end
+
+    def targeted_inventory(ems, target)
+      collector_klass = ManageIQ::Providers::DummyProvider::Inventory::Collector::TargetCollection
+      persister_klass = ManageIQ::Providers::DummyProvider::Inventory::Persister::TargetCollection
       parser_klass    = ManageIQ::Providers::DummyProvider::Inventory::Parser::CloudManager
 
       inventory(ems, target, collector_klass, persister_klass, [parser_klass])
