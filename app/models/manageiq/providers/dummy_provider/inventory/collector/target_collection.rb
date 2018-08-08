@@ -1,4 +1,8 @@
 class ManageIQ::Providers::DummyProvider::Inventory::Collector::TargetCollection < ManagerRefresh::Inventory::Collector
+  def flavors
+    []
+  end
+
   def vms
     [
       {

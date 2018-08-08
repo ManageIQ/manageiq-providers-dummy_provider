@@ -22,7 +22,7 @@ class ManageIQ::Providers::DummyProvider::Builder
     def targeted_inventory(ems, target)
       collector_klass = ManageIQ::Providers::DummyProvider::Inventory::Collector::TargetCollection
       persister_klass = ManageIQ::Providers::DummyProvider::Inventory::Persister::TargetCollection
-      parser_klass    = ManageIQ::Providers::DummyProvider::Inventory::Parser::TargetCollection
+      parser_klass    = ManageIQ::Providers::DummyProvider::Inventory::Parser::CloudManager
 
       inventory(ems, target, collector_klass, persister_klass, [parser_klass])
     end
