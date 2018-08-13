@@ -46,6 +46,6 @@ class ManageIQ::Providers::DummyProvider::CloudManager < ManageIQ::Providers::Cl
   end
 
   def ansible_root
-    self.class.parent::Engine.root.join("content/ansible")
+    self.class.parent::Engine.root.join("content/ansible_runner")
   end
 end
