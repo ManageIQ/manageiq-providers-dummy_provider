@@ -44,4 +44,8 @@ class ManageIQ::Providers::DummyProvider::CloudManager < ManageIQ::Providers::Cl
   def self.description
     @description ||= "Dummy Provider".freeze
   end
+
+  def ansible_root
+    self.class.parent::Engine.root.join("content/ansible_runner")
+  end
 end

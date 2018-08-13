@@ -14,6 +14,30 @@ class ManageIQ::Providers::DummyProvider::CloudManager::Vm < ManageIQ::Providers
     update_attributes!(:raw_power_state => "on")
   end
 
+  def info
+    raw_info
+  end
+
+  def raw_info
+    env_vars = {
+      "PROVIDER_USERID"   => "root",
+      "PROVIDER_PASSWORD" => "password",
+    }
+    extra_vars = {
+      :id     => id,
+      :vmname => name,
+    }
+
+    playbook_path = ext_management_system.ansible_root.join("vm_info.yml")
+
+    result = Ansible::Runner.run(env_vars, extra_vars, playbook_path)
+    if result.return_code != 0
+      _log.error("Failed to get VM info: #{result.parsed_stdout.join("\n")}")
+    else
+      _log.info(result.parsed_stdout.join("\n"))
+    end
+  end
+
   def raw_stop
     with_provider_object(&:stop)
     # Temporarily update state for quick UI response until refresh comes along
