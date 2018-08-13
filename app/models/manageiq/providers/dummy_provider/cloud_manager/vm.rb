@@ -24,8 +24,8 @@ class ManageIQ::Providers::DummyProvider::CloudManager::Vm < ManageIQ::Providers
       "PROVIDER_PASSWORD" => "password",
     }
     extra_vars = {
-      :id   => id,
-      :name => name,
+      :id     => id,
+      :vmname => name,
     }
     playbook_path = ext_management_system.ansible_root.join("dummy.yml")
 
