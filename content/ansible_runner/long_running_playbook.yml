@@ -1,0 +1,15 @@
+---
+- name: Long Running Playbook
+  hosts: localhost
+  vars:
+    id: "{{ id }}"
+    vmname: "{{ vmname }}"
+  connection: local
+  gather_facts: False
+  tasks:
+    - name: Print the Username
+      command: "/bin/echo \"Provider username: {{ lookup('env', 'PROVIDER_USERID') }}\""
+    - name: Sleep for a bit
+      command: "sleep 30"
+    - name: Print the ID/Name
+      command: "/bin/echo \"ID [{{ id }}] Name [{{ vmname }}]\""

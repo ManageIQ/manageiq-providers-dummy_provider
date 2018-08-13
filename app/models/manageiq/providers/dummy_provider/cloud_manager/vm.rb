@@ -38,6 +38,23 @@ class ManageIQ::Providers::DummyProvider::CloudManager::Vm < ManageIQ::Providers
     end
   end
 
+  def long_running_playbook
+    env_vars = {
+      "PROVIDER_USERID"   => "root",
+      "PROVIDER_PASSWORD" => "password",
+    }
+    extra_vars = {
+      :id     => id,
+      :vmname => name,
+    }
+
+    playbook_path = ext_management_system.ansible_root.join("long_running_playbook.yml")
+
+    job = ManageIQ::Providers::AnsibleRunnerWorkflow.create_job(env_vars, extra_vars, playbook_path)
+    job.signal(:start)
+    job.miq_task
+  end
+
   def raw_stop
     with_provider_object(&:stop)
     # Temporarily update state for quick UI response until refresh comes along
