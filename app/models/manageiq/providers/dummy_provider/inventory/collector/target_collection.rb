@@ -1,4 +1,4 @@
-class ManageIQ::Providers::DummyProvider::Inventory::Collector::TargetCollection < ManagerRefresh::Inventory::Collector
+class ManageIQ::Providers::DummyProvider::Inventory::Collector::TargetCollection < ManageIQ::Providers::DummyProvider::Inventory::Collector
   def flavors
     []
   end

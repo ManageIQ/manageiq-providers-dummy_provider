@@ -1,4 +1,4 @@
-class ManageIQ::Providers::DummyProvider::Inventory::Collector::CloudManager < ManagerRefresh::Inventory::Collector
+class ManageIQ::Providers::DummyProvider::Inventory::Collector::CloudManager < ManageIQ::Providers::DummyProvider::Inventory::Collector
   def flavors
     [
       {

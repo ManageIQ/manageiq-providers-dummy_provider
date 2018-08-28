@@ -1,4 +1,4 @@
-class ManageIQ::Providers::DummyProvider::Inventory::Parser < ManagerRefresh::Inventory::Parser
+class ManageIQ::Providers::DummyProvider::Inventory::Parser < ManageIQ::Providers::Inventory::Parser
   require_nested :CloudManager
 
   include Vmdb::Logging
