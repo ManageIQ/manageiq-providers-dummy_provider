@@ -2,7 +2,7 @@ class ManageIQ::Providers::DummyProvider::Builder
   class << self
     def build_inventory(ems, target)
       case target
-      when ManagerRefresh::TargetCollection
+      when InventoryRefresh::TargetCollection
         targeted_inventory(ems, target)
       else
         cloud_manager_inventory(ems, target)
