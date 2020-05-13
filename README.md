@@ -1,7 +1,7 @@
 # manageiq-providers-dummy_provider
 
 [![Gem Version](https://badge.fury.io/rb/manageiq-providers-dummy_provider.svg)](http://badge.fury.io/rb/manageiq-providers-dummy_provider)
-[![Build Status](https://travis-ci.org/ManageIQ/manageiq-providers-dummy_provider.svg)](https://travis-ci.org/ManageIQ/manageiq-providers-dummy_provider)
+[![Build Status](https://travis-ci.com/ManageIQ/manageiq-providers-dummy_provider.svg)](https://travis-ci.com/ManageIQ/manageiq-providers-dummy_provider)
 [![Code Climate](https://codeclimate.com/github/ManageIQ/manageiq-providers-dummy_provider.svg)](https://codeclimate.com/github/ManageIQ/manageiq-providers-dummy_provider)
 [![Test Coverage](https://codeclimate.com/github/ManageIQ/manageiq-providers-dummy_provider/badges/coverage.svg)](https://codeclimate.com/github/ManageIQ/manageiq-providers-dummy_provider/coverage)
 [![Dependency Status](https://gemnasium.com/ManageIQ/manageiq-providers-dummy_provider.svg)](https://gemnasium.com/ManageIQ/manageiq-providers-dummy_provider)
