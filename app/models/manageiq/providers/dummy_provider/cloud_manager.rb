@@ -38,11 +38,11 @@ class ManageIQ::Providers::DummyProvider::CloudManager < ManageIQ::Providers::Cl
               :validationDependencies => %w[type provider_region],
               :fields                 => [
                 {
-                  :component  => "select-field",
+                  :component  => "select",
                   :name       => "endpoints.default.security_protocol",
                   :label      => _("Security Protocol"),
                   :isRequired => true,
-                  :validate   => [{:type => "required-validator"}],
+                  :validate   => [{:type => "required"}],
                   :options    => [
                     {
                       :label => _("SSL without validation"),
@@ -63,7 +63,7 @@ class ManageIQ::Providers::DummyProvider::CloudManager < ManageIQ::Providers::Cl
                   :name       => "endpoints.default.hostname",
                   :label      => _("Hostname (or IPv4 or IPv6 address)"),
                   :isRequired => true,
-                  :validate   => [{:type => "required-validator"}],
+                  :validate   => [{:type => "required"}],
                 },
                 {
                   :component    => "text-field",
@@ -72,14 +72,14 @@ class ManageIQ::Providers::DummyProvider::CloudManager < ManageIQ::Providers::Cl
                   :type         => "number",
                   :initialValue => 12345,
                   :isRequired   => true,
-                  :validate     => [{:type => "required-validator"}],
+                  :validate     => [{:type => "required"}],
                 },
                 {
                   :component  => "text-field",
                   :name       => "authentications.default.userid",
                   :label      => "Username",
                   :isRequired => true,
-                  :validate   => [{:type => "required-validator"}],
+                  :validate   => [{:type => "required"}],
                 },
                 {
                   :component  => "password-field",
@@ -87,7 +87,7 @@ class ManageIQ::Providers::DummyProvider::CloudManager < ManageIQ::Providers::Cl
                   :label      => "Password",
                   :type       => "password",
                   :isRequired => true,
-                  :validate   => [{:type => "required-validator"}],
+                  :validate   => [{:type => "required"}],
                 },
               ]
             }
