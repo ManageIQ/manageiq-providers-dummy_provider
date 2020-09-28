@@ -35,6 +35,7 @@ class ManageIQ::Providers::DummyProvider::CloudManager < ManageIQ::Providers::Cl
               :component              => 'validate-provider-credentials',
               :name                   => 'authentications.default.valid',
               :skipSubmit             => true,
+              :isRequired             => true,
               :validationDependencies => %w[type provider_region],
               :fields                 => [
                 {
