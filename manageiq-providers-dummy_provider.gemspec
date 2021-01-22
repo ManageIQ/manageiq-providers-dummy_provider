@@ -13,5 +13,6 @@ Gem::Specification.new do |s|
 
   s.files = Dir["{app,config,lib}/**/*"]
 
+  s.add_development_dependency "manageiq-style"
   s.add_development_dependency "simplecov"
 end
