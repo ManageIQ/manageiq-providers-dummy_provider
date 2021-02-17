@@ -39,12 +39,13 @@ class ManageIQ::Providers::DummyProvider::CloudManager < ManageIQ::Providers::Cl
               :validationDependencies => %w[type provider_region],
               :fields                 => [
                 {
-                  :component  => "select",
-                  :name       => "endpoints.default.security_protocol",
-                  :label      => _("Security Protocol"),
-                  :isRequired => true,
-                  :validate   => [{:type => "required"}],
-                  :options    => [
+                  :component    => "select",
+                  :name         => "endpoints.default.security_protocol",
+                  :label        => _("Security Protocol"),
+                  :isRequired   => true,
+                  :initialValue => 'ssl-with-validation',
+                  :validate     => [{:type => "required"}],
+                  :options      => [
                     {
                       :label => _("SSL without validation"),
                       :value => "ssl-no-validation"
