@@ -13,4 +13,5 @@
 /config/settings/*.local.yml
 /config/environments/*.local.yml
 /content/ansible_runner/roles/*
+!/content/ansible_runner/roles/requirements.yml
 /spec/manageiq

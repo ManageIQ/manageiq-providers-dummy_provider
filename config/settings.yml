@@ -21,6 +21,8 @@
     :password:
     :port:
     :user:
+:log:
+  :level_dummy: info
 :workers:
   :worker_base:
     :event_catcher:
