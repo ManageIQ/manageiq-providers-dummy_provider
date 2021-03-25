@@ -1,2 +1,2 @@
-class ManageIQ::Providers::DummyProvider::CloudManager::Flavor < ManageIQ::Providers::CloudManager::Flavor
+class ManageIQ::Providers::DummyProvider::CloudManager::Flavor < ::Flavor
 end
