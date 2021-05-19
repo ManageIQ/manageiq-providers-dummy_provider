@@ -6,6 +6,8 @@ class ManageIQ::Providers::DummyProvider::CloudManager < ManageIQ::Providers::Cl
   require_nested :RefreshWorker
   require_nested :Vm
 
+  supports :metrics
+
   # Form schema for creating/editing a provider, it should follow the DDF specification
   # For more information check the DDF documentation at: https://data-driven-forms.org
   #
