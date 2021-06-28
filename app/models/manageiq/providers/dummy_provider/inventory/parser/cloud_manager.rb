@@ -7,11 +7,10 @@ class ManageIQ::Providers::DummyProvider::Inventory::Parser::CloudManager < Mana
   def flavors
     collector.flavors.each do |flavor|
       persister.flavors.build(
-        :name      => flavor["name"],
-        :ems_ref   => flavor["name"],
-        :cpus      => flavor["cpus"],
-        :cpu_cores => 1,
-        :memory    => flavor["memory"],
+        :name            => flavor["name"],
+        :ems_ref         => flavor["name"],
+        :cpu_total_cores => flavor["cpus"],
+        :memory          => flavor["memory"],
       )
     end
   end
