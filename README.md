@@ -4,7 +4,6 @@
 [![Build Status](https://travis-ci.com/ManageIQ/manageiq-providers-dummy_provider.svg)](https://travis-ci.com/ManageIQ/manageiq-providers-dummy_provider)
 [![Code Climate](https://codeclimate.com/github/ManageIQ/manageiq-providers-dummy_provider.svg)](https://codeclimate.com/github/ManageIQ/manageiq-providers-dummy_provider)
 [![Test Coverage](https://codeclimate.com/github/ManageIQ/manageiq-providers-dummy_provider/badges/coverage.svg)](https://codeclimate.com/github/ManageIQ/manageiq-providers-dummy_provider/coverage)
-[![Security](https://hakiri.io/github/ManageIQ/manageiq-providers-dummy_provider/master.svg)](https://hakiri.io/github/ManageIQ/manageiq-providers-dummy_provider/master)
 
 [![Chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ManageIQ/manageiq-providers-dummy_provider?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Translate](https://img.shields.io/badge/translate-zanata-blue.svg)](https://translate.zanata.org/zanata/project/view/manageiq-providers-dummy_provider)
