@@ -21,7 +21,7 @@ class ManageIQ::Providers::DummyProvider::CloudManager < ManageIQ::Providers::Cl
   # confuse the validation. For example you should not have `x` and `x.y` fields at the
   # same time.
   def self.params_for_create
-    @params_for_create ||= {
+    {
       :fields => [
         {
           :component => "text-field",
@@ -81,14 +81,14 @@ class ManageIQ::Providers::DummyProvider::CloudManager < ManageIQ::Providers::Cl
                 {
                   :component  => "text-field",
                   :name       => "authentications.default.userid",
-                  :label      => "Username",
+                  :label      => _("Username"),
                   :isRequired => true,
                   :validate   => [{:type => "required"}],
                 },
                 {
                   :component  => "password-field",
                   :name       => "authentications.default.password",
-                  :label      => "Password",
+                  :label      => _("Password"),
                   :type       => "password",
                   :isRequired => true,
                   :validate   => [{:type => "required"}],
