@@ -1,4 +1,5 @@
 class ManageIQ::Providers::DummyProvider::CloudManager::Vm < ManageIQ::Providers::CloudManager::Vm
+  supports :capture
 
   def provider_object(connection = nil)
     connection ||= ext_management_system.connect
