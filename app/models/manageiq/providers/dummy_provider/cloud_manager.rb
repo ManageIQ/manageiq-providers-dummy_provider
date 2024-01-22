@@ -38,7 +38,7 @@ class ManageIQ::Providers::DummyProvider::CloudManager < ManageIQ::Providers::Cl
               :name                   => 'authentications.default.valid',
               :skipSubmit             => true,
               :isRequired             => true,
-              :validationDependencies => %w[type provider_region],
+              :validationDependencies => %w[type zone_id provider_region],
               :fields                 => [
                 {
                   :component    => "select",
