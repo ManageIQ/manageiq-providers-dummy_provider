@@ -1,11 +1,4 @@
 class ManageIQ::Providers::DummyProvider::CloudManager < ManageIQ::Providers::CloudManager
-  require_nested :Flavor
-  require_nested :MetricsCapture
-  require_nested :MetricsCollectorWorker
-  require_nested :Refresher
-  require_nested :RefreshWorker
-  require_nested :Vm
-
   supports :metrics
 
   # Form schema for creating/editing a provider, it should follow the DDF specification
