@@ -1,6 +1,4 @@
 class ManageIQ::Providers::DummyProvider::CloudManager::MetricsCollectorWorker < ManageIQ::Providers::BaseManager::MetricsCollectorWorker
-  require_nested :Runner
-
   self.default_queue_name = "dummy_provider"
 
   def friendly_name
