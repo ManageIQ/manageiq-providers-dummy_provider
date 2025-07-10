@@ -3,7 +3,6 @@
 /.yardoc
 /Gemfile.lock
 /_yardoc/
-/config/secrets.yml
 /coverage/
 /doc/
 /pkg/
@@ -15,4 +14,5 @@
 /config/environments/*.local.yml
 /content/ansible_runner/roles/*
 !/content/ansible_runner/roles/requirements.yml
+/spec/config/secrets.yml
 /spec/manageiq
