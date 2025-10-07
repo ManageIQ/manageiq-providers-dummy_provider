@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" role="img">
+  <rect x="10" y="10" width="180" height="180" rx="24" ry="24" fill="#f3f4f6" stroke="#374151" stroke-width="6" />
+  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI, Roboto, Arial, sans-serif"
+        font-weight="700" font-size="92" fill="#0f172a">…</text>
+</svg>
