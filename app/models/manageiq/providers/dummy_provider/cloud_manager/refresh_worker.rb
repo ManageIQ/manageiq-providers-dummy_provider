@@ -1,5 +1,5 @@
 class ManageIQ::Providers::DummyProvider::CloudManager::RefreshWorker < MiqEmsRefreshWorker
   def self.ems_class
-    parent
+    module_parent
   end
 end
