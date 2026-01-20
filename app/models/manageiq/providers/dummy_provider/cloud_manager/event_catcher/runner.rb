@@ -34,7 +34,7 @@ class ManageIQ::Providers::DummyProvider::CloudManager::EventCatcher::Runner < M
 
   def event_monitor_handle
     @event_monitor_handle ||= begin
-      self.class.parent::Stream.new(
+      self.class.module_parent::Stream.new(
         @ems,
         :poll_sleep => worker_settings[:poll]
       )
