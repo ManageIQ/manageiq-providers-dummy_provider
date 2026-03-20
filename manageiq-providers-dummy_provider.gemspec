@@ -13,6 +13,6 @@ Gem::Specification.new do |s|
 
   s.files = Dir["{app,config,lib}/**/*"]
 
-  s.add_development_dependency "manageiq-style", "~> 1.5.0"
+  s.add_development_dependency "manageiq-style"
   s.add_development_dependency "simplecov", ">= 0.21.2"
 end
